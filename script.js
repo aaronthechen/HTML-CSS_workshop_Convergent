@@ -1,11 +1,5 @@
-// script.js
-
-// Alert message when the page loads
-window.onload = function() {
-  alert("Welcome to my first web page!");
-};
-
-// Function to change the text when button is clicked
-function changeText() {
-  document.getElementById("myParagraph").innerText = "You clicked the button!";
-}
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for your message! I will get back to you soon.');
+    document.getElementById('contact-form').reset();
+});

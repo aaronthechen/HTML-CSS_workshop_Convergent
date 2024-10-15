@@ -1,21 +1,194 @@
-/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
   color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 0;
-  padding: 20px;
+  flex-direction: column;
 }
 
-h1 {
-  color: #007acc;
-  font-size: 36px;
+header h1 {
+  font-size: 4rem;
   margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: floatIn 1s ease-out forwards;
 }
 
-p {
-  font-size: 18px;
-  color: #555;
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header p {
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: floatIn 1s ease-out forwards;
+  animation-delay: 1s;
+  padding: 0 20px;
+}
+
+.landing {
+  height: 200px;
+  
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.contact-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  padding: 50px 75px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 1000px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+#about p,
+#projects p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact form label {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact form button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact form button:hover {
+  background-color: #555;
+}
+
+/* Grid Container */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Responsive grid */
+  gap: 20px;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  /* Small lift on hover */
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 0 15px 15px;
+}
+
+.project-card a {
+  display: block;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.project-card a:hover {
+  background-color: #555;
 }

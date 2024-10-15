@@ -1,19 +1,93 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>My Personal Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aaron Chen Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+  <header>
+    <div class="landing">
+      <h1>Aaron Chen</h1>
+      <p>Software Engineer | Web Developer | Student</p>
+    </div>
+    <div class="scroll-down">
+      <i class="fas fa-arrow-down"></i> <!-- Font Awesome arrow -->
+    </div>
+  </header>
 
-  <h1>Hello World!</h1>
-  
-  <p>This is my first web page!</p>
-  
-  <button onclick="changeText()">Click me!</button>
-  
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm an undergraduate student in the CS + Business (CSB) Honors Program at the University of Texas at Austin. I'm
+        interested in Software Engineering, Project Management, and bridging the gap between technical and social
+        problem-solving.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="code.img" alt="Project 1">
+          <h3>Dailery</h3>
+          <p>An open gallery for any user to submit one single artwork a day. Built with Firebase, Next.js, and Tailwind.</p>
+          <a href="https://github.com/aaronthechen/dailery" target="_blank">View on GitHub</a>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="code.img" alt="Project 2">
+          <h3>PHILOS_AI</h3>
+          <p>A minimal semantic searching program which responds to a query with relevant philosophical sentences.</p>
+          <a href="https://github.com/aaronthechen/philos-ai" target="_blank">View on GitHub</a>
+        </div>
+    
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="code.img" alt="Project 3">
+          <h3>SlapJackGame</h3>
+          <p>A virtual port of the popular card game SlapJack. Written in HTML, CSS, JavaScript, and Node.js.</p>
+          <a href="https://github.com/aaronthechen/SlapJackGame" target="_blank">View on GitHub</a>
+        </div>
+    
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-container">
+      <div class="form-container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Write your name.." required>
+        
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email"  placeholder="name@example.com" required>
+        
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Type your message here.."></textarea>
+        
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
