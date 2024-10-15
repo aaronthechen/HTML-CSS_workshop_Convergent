@@ -1,5 +1,5 @@
 # HTML-CSS_workshop_Convergent
-Tech Workshop #4: Provides basic starter code for personal website deliverable.
+Example portfolio website with projects and contact form
 
 ### To run: 
 
